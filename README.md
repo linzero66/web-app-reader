@@ -8,7 +8,7 @@
 
 # 运行项目
 
-> 如果直接用谷歌浏览器打开html文件，由于浏览器（Webkit内核）的安全策略决定了file协议访问的应用无法使用XMLHttpRequest对象，会导致跨域请求问题，<br/>
+> 如果直接用谷歌浏览器打开html文件，由于浏览器（Webkit内核）的安全策略决定了file协议访问的应用无法使用XMLHttpRequest对象，会导致跨域请求问题，
   但在某些浏览器中是允许这种操作的，比如Firefox浏览器，也就是说Filefox支持file协议下的AJAX请求。（请使用手机模式查看）<br/>
   请使用有内置http服务器的WEB开发的IDE(比如webstorm)打开文件或者使用火狐浏览器查看。
 
