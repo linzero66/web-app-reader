@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reader.css">
+
+	</head>
+	<body>
+		<div class="loading-mask" id="init_loading">
+			<div class="loading-icon"></div>
+		</div>
+		<div class="container" id="root">
+			<div id="fiction_chapter_title"></div>
+			<div class="m-artical-action">
+				<div class="artical-action-mid" id="action_mid"></div>
+			</div>
+			<!--呈现小说的内容-->
+			<div id="fiction_container" class="m-read-content"></div>
+			<!--顶部导航栏-->
+			<div class="top-nav" id="top-nav" style="display:none">
+				<div class="top-nav-warp">
+					<div class="icon-back"></div>
+				</div>
+				<a class="nav-bookshelf" href="http://m.jingyu.com/qhpass/index?backurl=%2FbookShelf%2Findex&vip=0"></a>
+				<a class="nav-home" href="http://m.jingyu.com/index/nboy"></a>
+				<a class="nav-search" href="http://m.jingyu.com/search"></a>
+			</div>
+			<div class="bookmark"></div>
+			<div class="top-nav-pannel-bk font-container" style="display:none"></div>
+			<div class="add-bookself">
+				<div>加入</div>
+				<div>书架</div>
+			</div>
+			<div class="top-nav-pannel font-container" id="font-container" style="display:none">
+				<div class="child-mod" id="bk-container"></div>
+				<div class="child-mod">
+					<span>字体</span>
+					<button id="small-font" class="spe-button" style="margin-left:10px;">
+					    Aa-
+				    </button>
+					<button id="large-font" class="spe-button">
+						Aa+
+					</button>
+				</div>
+			</div>
+
+			<div class="bottom-nav-bk bottom_nav" style="display:none"></div>
+
+			<div class="bottom-nav bottom_nav" id="menu-nav" style="display:none">
+				<div class="m-button-bar" id="bottom_tool_bar" style="display:none;">
+					<ul class="u-tab" id="bottom_tool_bar_ul">
+						<li id="prev_button" >
+							上一章
+						</li>
+						<input class="progInput"  type="range" min="0" max="100" value="0" step="0.1" style="background-size: 0.0520562% 100%;" >
+						<li id="next_button" style="border-right:none">
+							下一章
+						</li>
+					</ul>
+				</div>
+				<div class="item menu-button" id="menu_button">
+					<div class="item-warp">
+						<div class="icon-menu"></div>
+						<div class="icon-text">
+							目录
+						</div>
+					</div>
+				</div>
+				<div class="item" id="font-button">
+					<div class="item-warp">
+						<div class="icon-ft"></div>
+						<div class="icon-text">
+							设置
+						</div>
+					</div>
+				</div>
+				<div class="item" id="night-button">
+					<div class="item-warp" style="display:none" id="day_icon">
+						<div class="icon-day"></div>
+						<div class="icon-text">
+							白天
+						</div>
+					</div>
+					<div class="item-warp" id="night_icon">
+						<div class="icon-night"></div>
+						<div class="icon-text">
+							夜间
+						</div>
+					</div>
+				</div>
+				<div class="catelog-view">
+					<div class="catelog-bg"></div>
+					<div class="catelog-wrapper">
+						<ul class="tabs">
+							<li class="tab active" id="menu" data-container="catelog-container">目录</li>
+							<li class="tab" id="catelog-menu" data-container="bookmarks-container">书签</li>
+						</ul>
+
+						<div class="info-container catelog-container" id="catelog-container">
+							<div class="catelog-info">
+								<p class="chapter-num">共<span>1666</span>章</p>
+							</div>
+							<ul class="catelog-list">
+								<li>
+									<a href="/data/data1.json"></a>
+								</li>
+							</ul>
+						</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="m-tool-bar-mask" id="tool_bar_mask" style="display:none"></div>
+			<ul class="menu-container chapter-list" id="menu_container" style="display:none"></ul>
+			<div class="menu-mask" id="menu_mask" style="display:none"></div>
+			<div class="mask" id="mask" style="display:none"></div>
+		<script src="lib/zepto.min.js"></script>
+		<script>
+			window.jQuery = $;
+		</script>
+		<!--为了后面两个插件可以正常使用，需要的$符号-->
+		<script src="js/jquery.base64.js"></script>
+		<script src="js/jquery.jsonp.js"></script>
+		<script src="js/RangeSlider.js"></script>
+		<script src="js/reader.js"></script>
+	</body>
+</html>
